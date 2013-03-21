@@ -31,7 +31,7 @@ sub pod_eq_or_diff ($$$) {
 
 sub disk_file {
   my ($root, $name) = @_;
-  return $root->file($name->components);
+  return $root->file($name);
 }
 
 sub zilla_file {

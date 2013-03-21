@@ -1,5 +1,9 @@
 Revision history for Dist-Zilla-Plugin-BundleInspector
 
+0.002     2013-03-21T04:36:12Z
+
+  - Fix usage for older Path::Class and perls < v5.10
+
 0.001     2013-03-18T02:55:28Z
 
   - Initial release

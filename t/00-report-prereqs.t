@@ -30,6 +30,7 @@ my @modules = qw(
   Test::DZil
   Test::Differences
   Test::More
+  Try::Tiny
   perl
   strict
   warnings

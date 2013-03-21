@@ -12,9 +12,9 @@ use warnings;
 
 package Dist::Zilla::Plugin::BundleInspector;
 {
-  $Dist::Zilla::Plugin::BundleInspector::VERSION = '0.001';
+  $Dist::Zilla::Plugin::BundleInspector::VERSION = '0.002';
 }
-# git description: 3debba6
+# git description: v0.001-2-gac9c038
 
 BEGIN {
   $Dist::Zilla::Plugin::BundleInspector::AUTHORITY = 'cpan:RWSTAUNER';
@@ -148,7 +148,7 @@ Dist::Zilla::Plugin::BundleInspector - Gather prereq and config info from Plugin
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 SYNOPSIS
 
