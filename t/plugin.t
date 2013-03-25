@@ -27,10 +27,10 @@ INI
     ini => <<'INI',
 =head1 Config
 
-  [Angels / @Catapult/Of::The::Silences]
+  [Angels / Of::The::Silences]
   :version = 3
 
-  [Daylight / @Catapult/Fading]
+  [Daylight / Fading]
   [ImNotSleeping]
 
   [@Goodnight]

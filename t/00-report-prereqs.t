@@ -12,6 +12,7 @@ use List::Util qw/max/;
 my @modules = qw(
   Class::Load
   Config::MVP::BundleInspector
+  Config::MVP::Writer::INI
   Dist::Zilla
   Dist::Zilla::Plugin::Bootstrap::lib
   Dist::Zilla::Role::FileMunger
@@ -23,6 +24,7 @@ my @modules = qw(
   File::Temp
   List::Util
   Moose
+  Moose::Util::TypeConstraints
   MooseX::AttributeShortcuts
   Path::Class
   String::RewritePrefix
@@ -31,6 +33,7 @@ my @modules = qw(
   Test::Differences
   Test::More
   Try::Tiny
+  namespace::autoclean
   perl
   strict
   warnings

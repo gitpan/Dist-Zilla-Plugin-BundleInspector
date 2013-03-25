@@ -11,7 +11,7 @@ use warnings;
 
 package Dist::Zilla::Config::BundleInspector;
 {
-  $Dist::Zilla::Config::BundleInspector::VERSION = '0.002';
+  $Dist::Zilla::Config::BundleInspector::VERSION = '0.003';
 }
 BEGIN {
   $Dist::Zilla::Config::BundleInspector::AUTHORITY = 'cpan:RWSTAUNER';
@@ -121,7 +121,7 @@ Dist::Zilla::Config::BundleInspector - Give Hints to Config::MVP::BundleInspecto
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 SYNOPSIS
 

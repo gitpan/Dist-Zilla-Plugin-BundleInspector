@@ -33,19 +33,22 @@ my %WriteMakefileArgs = (
   "PREREQ_PM" => {
     "Class::Load" => 0,
     "Config::MVP::BundleInspector" => 0,
+    "Config::MVP::Writer::INI" => "0.003",
     "Dist::Zilla" => 4,
     "Dist::Zilla::Plugin::Bootstrap::lib" => 0,
     "Dist::Zilla::Role::FileMunger" => 0,
     "Dist::Zilla::Role::PrereqSource" => 0,
     "Moose" => 0,
+    "Moose::Util::TypeConstraints" => 0,
     "MooseX::AttributeShortcuts" => 0,
     "String::RewritePrefix" => 0,
     "Sub::Override" => 0,
     "Try::Tiny" => 0,
+    "namespace::autoclean" => 0,
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.002",
+  "VERSION" => "0.003",
   "test" => {
     "TESTS" => "t/*.t"
   }

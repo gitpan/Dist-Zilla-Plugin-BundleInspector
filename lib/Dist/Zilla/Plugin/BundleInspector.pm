@@ -12,9 +12,9 @@ use warnings;
 
 package Dist::Zilla::Plugin::BundleInspector;
 {
-  $Dist::Zilla::Plugin::BundleInspector::VERSION = '0.002';
+  $Dist::Zilla::Plugin::BundleInspector::VERSION = '0.003';
 }
-# git description: v0.001-2-gac9c038
+# git description: v0.002-2-g7b7bef1
 
 BEGIN {
   $Dist::Zilla::Plugin::BundleInspector::AUTHORITY = 'cpan:RWSTAUNER';
@@ -23,7 +23,9 @@ BEGIN {
 
 use Moose;
 use MooseX::AttributeShortcuts;
+use Moose::Util::TypeConstraints;
 use Dist::Zilla::Config::BundleInspector;
+use namespace::autoclean;
 
 with qw(
   Dist::Zilla::Role::FileMunger
@@ -32,29 +34,18 @@ with qw(
 
 sub mvp_multivalue_args { qw( bundle ) }
 
+{
+  my $type = subtype as 'RegexpRef';
+  coerce $type, from 'Str', via { qr/$_/ };
 has file_name_re => (
   is         => 'ro',
-  isa        => 'RegexpRef',
+  isa        => $type,
+  coerce     => 1,
   default    => sub {
     qr{(?: ^lib/ )? ( (?: [^/]+/ )+ PluginBundle/.+? ) \.pm$}x
   },
 );
-
-# coerce
-around BUILDARGS => sub {
-  my ($orig, $class, @args) = @_;
-  my $args = $class->$orig(@args);
-
-  foreach my $re ( qw(
-    file_name_re
-  ) ){
-    # upgrade Str to RegExp
-    $args->{ $re } = qr/$args->{ $re }/
-      if exists $args->{ $re };
-  }
-
-  return $args;
-};
+}
 
 
 has bundles => (
@@ -148,7 +139,7 @@ Dist::Zilla::Plugin::BundleInspector - Gather prereq and config info from Plugin
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 SYNOPSIS
 
